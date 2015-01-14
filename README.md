@@ -1,2 +1,2 @@
 # wellstnet
-wells.net blog
+blog.wellst.net
