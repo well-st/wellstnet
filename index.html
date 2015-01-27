@@ -8,20 +8,6 @@ title: Wells Blog
 	</div>
 </div>
 <div class="row">
-	<div class="span12">
-		<p>文章列表</p>
-	</div>
-</div>
-<div class="row">
-	<div class="span12">
-		<ul id="posts">
-			{% for post in site.posts %}
-			　　<li>{{ post.date | date_to_string }} &nbsp;&nbsp;&nbsp; <a style="width:400px;display:inline-block" href="{{ post.url }}">{{ post.title }}</a></li>
-			{% endfor %}
-		</ul>
-	</div>
-</div>
-<div class="row">
 	<div class="span10">
 		
 		<!-- This loops through the paginated posts -->
@@ -41,7 +27,7 @@ title: Wells Blog
 		  {% if paginator.previous_page %}
 			<a href="{{ paginator.previous_page_path }}" class="previous">上一页</a>
 		  {% else %}
-			<span class="previous">Previous</span>
+			<span class="previous">上一页</span>
 		  {% endif %}
 		  {% if paginator.next_page %}
 			<a href="{{ paginator.next_page_path }}" class="next">下一页</a>
@@ -51,7 +37,7 @@ title: Wells Blog
 		</div>
 	</div>
 	<div class="span2">
-		
+		<p>文章列表</p>
 		<ul id="posts">
 			{% for post in site.posts %}
 			　　<li>{{ post.date | date_to_string }} &nbsp; <a style="width:400px;display:inline-block" href="{{ post.url }}">{{ post.title }}</a></li>
